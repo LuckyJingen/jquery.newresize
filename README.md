@@ -2,35 +2,43 @@
 封装了一个为了解决jQuery的resize()事件在浏览器窗口大小改变时多次执行带来浏览器卡顿假死现象的扩展插件，大家拿去用用啊！
 #### 由于最近都在用vue做项目，那么这个demo就也用vue来做了 ##
 
- - **首先安装vue工程**
+**|首先安装vue工程**
+ 2. 简单回忆下安装过程      
+ 3. 保证node环境        
+ 4. npm install vue
+ 5. vue init webpack my-project
+ 6. cd my-project     
+ 7. npm install       
+ 8. npm run dev
 
-> 简单回忆下安装过程 
-> 保证node环境
-> npm install vue
-> vue init webpack my-project
-> cd my-project 
-> npm install
-> npm run dev
+**||然后把文件jquery.newresize.js引入项目中**
 
- - **然后把文件jquery.newresize.js引入项目中**
+ 1. 文件存放路径：src/assets/js/jquery.newresize.js
 
+ 2. 此方法是封装成一个jquery的对象，所以使用时依赖于jquery
 
-> 文件存放路径：src/assets/js/jquery.newresize.js
-> 此方法是封装成一个jquery的对象，所以使用时依赖于jquery
+ 3. 首先安装jquery
+ 4. npm install jquery --save-dev  
 
- - 首先安装jquery
-    npm install jquery --save-dev
     创建一个jquery-shim文件名，以下为文件内容，将jquery的$进行处理，最终解决全局调用的问题
-    import $ from 'jquery'
+ 5. import $ from 'jquery'  
+
     window.$=window.jQuery=$;
-    在main.js文件中引入文件
-    import './assets/js/jquery-shim'
+ 6. 在main.js文件中引入文件  
+
+    import './assets/js/jquery-shim'  
+    
     import './assets/js/jquery.newresize.js'
- - 准备工作完毕，我们就可以在demo文件中去测试使用啦
-    **调用方法**
-    **$(window).newresize(this.autoResize,200)** 
+ 7. 准备工作完毕，我们就可以在demo文件中去测试使用啦
+    
+ 8. **调用方法**  
+
+    **$(window).newresize(this.autoResize,200)**  
+    
     **说一下，对象 . newresize(同学要做进行的操作，操作时间间隔)**
-    直接看代码，来个直观的调用
+  
+ 9. 直接看代码，来个直观的调用
+
 ```
 <script>
 export default {
@@ -63,7 +71,6 @@ export default {
 ```
 
  - 注意，这个resize事件如果添加到window中，还是需要适当的时候去销毁一下的，效率效率啊！！！
-
  - 好啦 其实很简单的一个小操作，巴拉巴拉说一堆，我都嫌弃自己麻烦啦，有需要用的同学可以研究一下有没有更好的方案，记得告诉我哦
 
      
