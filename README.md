@@ -2,14 +2,15 @@
 封装了一个为了解决jQuery的resize()事件在浏览器窗口大小改变时多次执行带来浏览器卡顿假死现象的扩展插件，大家拿去用用啊！
 #### 由于最近都在用vue做项目，那么这个demo就也用vue来做了 ##
 
-**|首先安装vue工程**
- 2. 简单回忆下安装过程      
- 3. 保证node环境        
- 4. npm install vue
- 5. vue init webpack my-project
- 6. cd my-project     
- 7. npm install       
- 8. npm run dev
+**|首先安装vue工程**  
+
+ 1. 简单回忆下安装过程      
+ 2. 保证node环境        
+ 3. npm install vue
+ 4. vue init webpack my-project
+ 5. cd my-project     
+ 6. npm install       
+ 7. npm run dev
 
 **||然后把文件jquery.newresize.js引入项目中**
 
