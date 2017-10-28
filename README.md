@@ -73,6 +73,7 @@ export default {
 
  - 注意，这个resize事件如果添加到window中，还是需要适当的时候去销毁一下的，效率效率啊！！！
  - 好啦 其实很简单的一个小操作，巴拉巴拉说一堆，我都嫌弃自己麻烦啦，有需要用的同学可以研究一下有没有更好的方案，记得告诉我哦
+- demo地址：http://wowgoo.cn/jquery.newresize/#/
 
      
 
